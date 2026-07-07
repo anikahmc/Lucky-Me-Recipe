@@ -1,0 +1,60 @@
+/* Global reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden; /* no scroll */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* Root app container */
+#root {
+  height: 100vh;
+  width: 100vw;
+}
+
+/* Main layout */
+.app {
+  display: flex;
+  flex-direction: row;        /* horizontal base layout */
+  height: 100vh;
+  width: 100vw;
+}
+
+/* Example sections */
+.section {
+  flex: 1;                    /* equal width columns */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+}
+
+/* Just for visual separation */
+.section--left {
+  background: #111827;
+  color: #f9fafb;
+}
+
+.section--right {
+  background: #f3f4f6;
+  color: #111827;
+}
+
+/* Mobile: stack vertically, still no scroll if content fits */
+@media (max-width: 768px) {
+  .app {
+    flex-direction: column;   /* vertical on mobile */
+  }
+
+  .section {
+    padding: 1rem;
+  }
+}

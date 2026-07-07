@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./styles.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <section className="section section--left">
+        <h1>Brand / Hero</h1>
+        <p>Short, punchy copy. Fits cleanly without scroll.</p>
+        <p>search bar here</p>
+        <button>Lucky Me Button - i.e. recipe randomizer</button>
+      </section>
+{/* This section can be removed */}
+      <section className="section section--right">
+        <h2>Details / CTA</h2>
+        <p>The section is where the content can render.</p>
+      </section>
     </div>
   );
 }
